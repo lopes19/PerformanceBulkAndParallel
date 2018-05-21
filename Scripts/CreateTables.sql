@@ -1,0 +1,40 @@
+﻿USE [BulkAndParallel]
+GO
+
+/****** Object:  Table [dbo].[MainTable]    Script Date: 21/05/2018 14:50:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[MainTable](
+	[Id] [int] NOT NULL,
+	[Description] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_MainTable] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[TempTable]    Script Date: 21/05/2018 14:53:01 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TempTable](
+	[TempKey] [int] IDENTITY(1,1) NOT NULL,
+	[Id] [int] NOT NULL,
+	[Description] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_TempTable] PRIMARY KEY CLUSTERED 
+(
+	[TempKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
