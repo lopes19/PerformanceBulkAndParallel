@@ -35,7 +35,7 @@ namespace PerformanceBulkAndParallel
 
         private static IEnumerable<Record> GenerateRandomList()
         {
-            var recordCount = 1000;
+            var recordCount = 1000000;
 
             Console.WriteLine($"Quantidade de registros para a carga: {recordCount}");
             Console.WriteLine("");
